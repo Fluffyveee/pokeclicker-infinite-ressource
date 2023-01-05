@@ -73,7 +73,7 @@ function initInfiniteRessource() {
 
     // Add ressources Money/Dungeon/Quest
     let elementToAddRessources = document.createElement("table")
-    elementToAddRessources.style.width = "10%";
+    elementToAddRessources.style.width = "100%";
     elementToAddRessources.innerHTML = `
         <tbody>
             <tr class="row" style="margin: 0;">

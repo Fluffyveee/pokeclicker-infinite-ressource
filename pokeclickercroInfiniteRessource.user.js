@@ -73,7 +73,7 @@ function initInfiniteRessource() {
 
     // Add ressources Money/Dungeon/Quest
     let elementToAddRessources = document.createElement("table")
-    elementToAddRessources.style.width = "100%";
+    elementToAddRessources.style.width = "10%";
     elementToAddRessources.innerHTML = `
         <tbody>
             <tr class="row" style="margin: 0;">
@@ -149,12 +149,12 @@ function initInfiniteRessource() {
             elementToAddGem.classList.add('btn-primary')
             elementToAddGem.style = "height: 100%; float: right; margin: auto 20px;"
             elementToAddGem.setAttribute('id', `add-gem-${idx}`)
-            elementToAddGem.innerHTML = `Add 10k <img title="${PokemonType[idx]} gems to add" src="${Gems.image(idx)}">`
+            elementToAddGem.innerHTML = `Add 90B <img title="${PokemonType[idx]} gems to add" src="${Gems.image(idx)}">`
 
             el.getElementsByClassName('float-right')[0].before(elementToAddGem)
             $(`#add-gem-${idx}`).click((event) => {
                 event.stopPropagation()
-                App.game.gems.gainGems(10000, idx)
+                App.game.gems.gainGems(90000000000, idx)
             })
         })
     }

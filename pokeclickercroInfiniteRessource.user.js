@@ -78,25 +78,25 @@ function initInfiniteRessource() {
         <tbody>
             <tr class="row" style="margin: 0;">
                 <td class="col" style="margin: 0px 10px; padding: 0;">
-                    <button class="btn btn-block btn-primary" id="add-gold" style="height: 100%;">Add 10M <img title="Money to add" src="assets/images/currency/money.svg" height="25px"></button>
+                    <button class="btn btn-block btn-primary" id="add-gold" style="height: 100%;">Add 90B <img title="Money to add" src="assets/images/currency/money.svg" height="25px"></button>
                 </td>
                 <td class="col" style="margin: 0px 10px; padding: 0;">
-                    <button class="btn btn-block btn-primary" id="add-dungeon-token" style="height: 100%;">Add 2M <img title="Dungeon token to add" src="assets/images/currency/dungeonToken.svg" height="25px"></button>
+                    <button class="btn btn-block btn-primary" id="add-dungeon-token" style="height: 100%;">Add 90B <img title="Dungeon token to add" src="assets/images/currency/dungeonToken.svg" height="25px"></button>
                 </td>
                 <td class="col" style="margin: 0px 10px; padding: 0;">
-                    <button class="btn btn-block btn-primary" id="add-quest-token" style="height: 100%;">Add 50K <img title="Quest point to add" src="assets/images/currency/questPoint.svg" height="25px"></button>
+                    <button class="btn btn-block btn-primary" id="add-quest-token" style="height: 100%;">Add 90B <img title="Quest point to add" src="assets/images/currency/questPoint.svg" height="25px"></button>
                 </td>
                  <td class="col" style="margin: 0px 10px; padding: 0;">
-                    <button class="btn btn-block btn-primary" id="add-battle-points" style="height: 100%;">Add 50K <img title="Battle points to add" src="assets/images/currency/battlePoint.svg" height="25px"></button>
+                    <button class="btn btn-block btn-primary" id="add-battle-points" style="height: 100%;">Add 90B <img title="Battle points to add" src="assets/images/currency/battlePoint.svg" height="25px"></button>
                 </td>
             </tr>
         </tbody>`
     ressourcePanelAbovePokemonBattle.after(elementToAddRessources)
 
-    $("#add-gold").click(() => App.game.wallet.gainMoney(1000000000, true));
-    $("#add-dungeon-token").click(() => App.game.wallet.gainDungeonTokens(2000000000, true));
-    $("#add-quest-token").click(() => App.game.wallet.gainQuestPoints(500000000));
-    $("#add-battle-points").click(() => App.game.wallet.gainBattlePoints(500000000));
+    $("#add-gold").click(() => App.game.wallet.gainMoney(90000000000, true));
+    $("#add-dungeon-token").click(() => App.game.wallet.gainDungeonTokens(90000000000, true));
+    $("#add-quest-token").click(() => App.game.wallet.gainQuestPoints(90000000000));
+    $("#add-battle-points").click(() => App.game.wallet.gainBattlePoints(90000000000));
 
 
 
@@ -105,10 +105,10 @@ function initInfiniteRessource() {
     elementToAddRessourcesDiamond.classList.add('btn')
     elementToAddRessourcesDiamond.classList.add('btn-primary')
     elementToAddRessourcesDiamond.setAttribute('id', 'add-diamond')
-    elementToAddRessourcesDiamond.innerHTML = `Add 1k <img title="Diamonds to add" src="assets/images/underground/diamond.svg" width="20px">`
+    elementToAddRessourcesDiamond.innerHTML = `Add 90B <img title="Diamonds to add" src="assets/images/underground/diamond.svg" width="20px">`
 
     undergroundDigModalUl[undergroundDigModalUl.length - 1].after(elementToAddRessourcesDiamond)
-    $("#add-diamond").click(() => App.game.wallet.gainDiamonds(100000000))
+    $("#add-diamond").click(() => App.game.wallet.gainDiamonds(90000000000))
 
 
     // Add ressources Farm Token
@@ -116,10 +116,10 @@ function initInfiniteRessource() {
     elementToAddRessourcesFarmToken.classList.add('btn')
     elementToAddRessourcesFarmToken.classList.add('-btn-primary')
     elementToAddRessourcesFarmToken.setAttribute('id', 'add-farm-token')
-    elementToAddRessourcesFarmToken.innerHTML = `Add 10k <img title="Farm points to add" src="assets/images/currency/farmPoint.svg" width="20px">`
+    elementToAddRessourcesFarmToken.innerHTML = `Add 90B <img title="Farm points to add" src="assets/images/currency/farmPoint.svg" width="20px">`
 
     farmModalUl[farmModalUl.length - 1].after(elementToAddRessourcesFarmToken)
-    $("#add-farm-token").click(() => App.game.wallet.gainFarmPoints(10000000))
+    $("#add-farm-token").click(() => App.game.wallet.gainFarmPoints(90000000000))
 
 
     // Add a quest level

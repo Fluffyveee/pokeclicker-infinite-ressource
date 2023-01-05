@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        [Pokeclicker Crobat branch] Add ressources
 // @namespace   http://tampermonkey.net/
-// @version     1.0.2
+// @version     1.0.3
 // @description Adds buttons to allow ressources to be added (Dungeon Token, Money, Quest Token, Battle Points or refill energy in the underground).
 // @author      Fluffyvee forked from Artentica
 // @match       https://crobat4.github.io/pokeclicker/
@@ -73,7 +73,7 @@ function initInfiniteRessource() {
 
     // Add ressources Money/Dungeon/Quest
     let elementToAddRessources = document.createElement("table")
-    elementToAddRessources.style.width = "10%";
+    elementToAddRessources.style.width = "100%";
     elementToAddRessources.innerHTML = `
         <tbody>
             <tr class="row" style="margin: 0;">

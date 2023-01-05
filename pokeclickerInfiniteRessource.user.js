@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name        [Pokeclicker] Add ressource
+// @name        [Pokeclicker Vanilla branch] Add ressources
 // @namespace   http://tampermonkey.net/
-// @version     1.0.0
-// @description Adds buttons to allow ressources to be added (dungeon token, money, quest token or refill energy in the underground).
-// @author      Artentica
+// @version     1.0.1
+// @description Adds buttons to allow ressources to be added (Dungeon Token, Money, Quest Token, Battle Points or refill energy in the underground).
+// @author      Fluffyvee forked from Artentica
 // @match       https://www.pokeclicker.com/
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=pokeclicker.com
 // @grant       none
@@ -86,13 +86,18 @@ function initInfiniteRessource() {
                 <td class="col" style="margin: 0px 10px; padding: 0;">
                     <button class="btn btn-block btn-primary" id="add-quest-token" style="height: 100%;">Add 50K <img title="Quest point to add" src="assets/images/currency/questPoint.svg" height="25px"></button>
                 </td>
+                 <td class="col" style="margin: 0px 10px; padding: 0;">
+                    <button class="btn btn-block btn-primary" id="add-battle-points" style="height: 100%;">Add 50K <img title="Battle points to add" src="assets/images/currency/battlePoint.svg" height="25px"></button>
+                </td>
             </tr>
         </tbody>`
     ressourcePanelAbovePokemonBattle.after(elementToAddRessources)
 
-    $("#add-gold").click(() => App.game.wallet.gainMoney(10000000, true));
-    $("#add-dungeon-token").click(() => App.game.wallet.gainDungeonTokens(2000000, true));
-    $("#add-quest-token").click(() => App.game.wallet.gainQuestPoints(50000));
+    $("#add-gold").click(() => App.game.wallet.gainMoney(1000000000, true));
+    $("#add-dungeon-token").click(() => App.game.wallet.gainDungeonTokens(2000000000, true));
+    $("#add-quest-token").click(() => App.game.wallet.gainQuestPoints(500000000));
+    $("#add-battle-points").click(() => App.game.wallet.gainBattlePoints(500000000));
+
 
 
     // Add ressources Diamond
@@ -103,7 +108,7 @@ function initInfiniteRessource() {
     elementToAddRessourcesDiamond.innerHTML = `Add 1k <img title="Diamonds to add" src="assets/images/underground/diamond.svg" width="20px">`
 
     undergroundDigModalUl[undergroundDigModalUl.length - 1].after(elementToAddRessourcesDiamond)
-    $("#add-diamond").click(() => App.game.wallet.gainDiamonds(1000))
+    $("#add-diamond").click(() => App.game.wallet.gainDiamonds(100000000))
 
 
     // Add ressources Farm Token
@@ -114,7 +119,7 @@ function initInfiniteRessource() {
     elementToAddRessourcesFarmToken.innerHTML = `Add 10k <img title="Farm points to add" src="assets/images/currency/farmPoint.svg" width="20px">`
 
     farmModalUl[farmModalUl.length - 1].after(elementToAddRessourcesFarmToken)
-    $("#add-farm-token").click(() => App.game.wallet.gainFarmPoints(10000))
+    $("#add-farm-token").click(() => App.game.wallet.gainFarmPoints(10000000))
 
 
     // Add a quest level
